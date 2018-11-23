@@ -150,32 +150,32 @@ SkipList.cpp.s:
 	$(MAKE) -f CMakeFiles/assignment3.dir/build.make CMakeFiles/assignment3.dir/SkipList.cpp.s
 .PHONY : SkipList.cpp.s
 
-main.o: main.cpp.o
+assignment3_test.o: assignment3_test.cpp.o
 
-.PHONY : main.o
+.PHONY : assignment3_test.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/assignment3.dir/build.make CMakeFiles/assignment3.dir/main.cpp.o
-.PHONY : main.cpp.o
+assignment3_test.cpp.o:
+	$(MAKE) -f CMakeFiles/assignment3.dir/build.make CMakeFiles/assignment3.dir/assignment3_test.cpp.o
+.PHONY : assignment3_test.cpp.o
 
-main.i: main.cpp.i
+assignment3_test.i: assignment3_test.cpp.i
 
-.PHONY : main.i
+.PHONY : assignment3_test.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/assignment3.dir/build.make CMakeFiles/assignment3.dir/main.cpp.i
-.PHONY : main.cpp.i
+assignment3_test.cpp.i:
+	$(MAKE) -f CMakeFiles/assignment3.dir/build.make CMakeFiles/assignment3.dir/assignment3_test.cpp.i
+.PHONY : assignment3_test.cpp.i
 
-main.s: main.cpp.s
+assignment3_test.s: assignment3_test.cpp.s
 
-.PHONY : main.s
+.PHONY : assignment3_test.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/assignment3.dir/build.make CMakeFiles/assignment3.dir/main.cpp.s
-.PHONY : main.cpp.s
+assignment3_test.cpp.s:
+	$(MAKE) -f CMakeFiles/assignment3.dir/build.make CMakeFiles/assignment3.dir/assignment3_test.cpp.s
+.PHONY : assignment3_test.cpp.s
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo "... SkipList.o"
 	@echo "... SkipList.i"
 	@echo "... SkipList.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... assignment3_test.o"
+	@echo "... assignment3_test.i"
+	@echo "... assignment3_test.s"
 .PHONY : help
 
 

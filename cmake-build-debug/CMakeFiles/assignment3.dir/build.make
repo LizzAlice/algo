@@ -57,18 +57,18 @@ include CMakeFiles/assignment3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/assignment3.dir/flags.make
 
-CMakeFiles/assignment3.dir/main.cpp.o: CMakeFiles/assignment3.dir/flags.make
-CMakeFiles/assignment3.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chaperone/projects/algorithms/assignment3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/assignment3.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/assignment3.dir/main.cpp.o -c /home/chaperone/projects/algorithms/assignment3/main.cpp
+CMakeFiles/assignment3.dir/assignment3_test.cpp.o: CMakeFiles/assignment3.dir/flags.make
+CMakeFiles/assignment3.dir/assignment3_test.cpp.o: ../assignment3_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chaperone/projects/algorithms/assignment3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/assignment3.dir/assignment3_test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/assignment3.dir/assignment3_test.cpp.o -c /home/chaperone/projects/algorithms/assignment3/assignment3_test.cpp
 
-CMakeFiles/assignment3.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assignment3.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chaperone/projects/algorithms/assignment3/main.cpp > CMakeFiles/assignment3.dir/main.cpp.i
+CMakeFiles/assignment3.dir/assignment3_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assignment3.dir/assignment3_test.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chaperone/projects/algorithms/assignment3/assignment3_test.cpp > CMakeFiles/assignment3.dir/assignment3_test.cpp.i
 
-CMakeFiles/assignment3.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment3.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chaperone/projects/algorithms/assignment3/main.cpp -o CMakeFiles/assignment3.dir/main.cpp.s
+CMakeFiles/assignment3.dir/assignment3_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment3.dir/assignment3_test.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chaperone/projects/algorithms/assignment3/assignment3_test.cpp -o CMakeFiles/assignment3.dir/assignment3_test.cpp.s
 
 CMakeFiles/assignment3.dir/SkipList.cpp.o: CMakeFiles/assignment3.dir/flags.make
 CMakeFiles/assignment3.dir/SkipList.cpp.o: ../SkipList.cpp
@@ -85,13 +85,13 @@ CMakeFiles/assignment3.dir/SkipList.cpp.s: cmake_force
 
 # Object files for target assignment3
 assignment3_OBJECTS = \
-"CMakeFiles/assignment3.dir/main.cpp.o" \
+"CMakeFiles/assignment3.dir/assignment3_test.cpp.o" \
 "CMakeFiles/assignment3.dir/SkipList.cpp.o"
 
 # External object files for target assignment3
 assignment3_EXTERNAL_OBJECTS =
 
-assignment3: CMakeFiles/assignment3.dir/main.cpp.o
+assignment3: CMakeFiles/assignment3.dir/assignment3_test.cpp.o
 assignment3: CMakeFiles/assignment3.dir/SkipList.cpp.o
 assignment3: CMakeFiles/assignment3.dir/build.make
 assignment3: CMakeFiles/assignment3.dir/link.txt

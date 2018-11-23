@@ -3,4 +3,4 @@ project(assignment3)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(assignment3 main.cpp SkipList.cpp SkipList.h)
+add_executable(assignment3 assignment3_test.cpp SkipList.cpp SkipList.h)

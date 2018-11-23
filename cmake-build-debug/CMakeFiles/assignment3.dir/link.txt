@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/assignment3.dir/main.cpp.o CMakeFiles/assignment3.dir/SkipList.cpp.o  -o assignment3 
+/usr/bin/c++  -g   CMakeFiles/assignment3.dir/assignment3_test.cpp.o CMakeFiles/assignment3.dir/SkipList.cpp.o  -o assignment3 

@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/chaperone/projects/algorithms/assignment3/SkipList.cpp" "/home/chaperone/projects/algorithms/assignment3/cmake-build-debug/CMakeFiles/assignment3.dir/SkipList.cpp.o"
-  "/home/chaperone/projects/algorithms/assignment3/main.cpp" "/home/chaperone/projects/algorithms/assignment3/cmake-build-debug/CMakeFiles/assignment3.dir/main.cpp.o"
+  "/home/chaperone/projects/algorithms/assignment3/assignment3_test.cpp" "/home/chaperone/projects/algorithms/assignment3/cmake-build-debug/CMakeFiles/assignment3.dir/assignment3_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

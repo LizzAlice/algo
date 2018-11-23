@@ -6,8 +6,8 @@
 #include <limits>
 #include <chrono>
 
-//#include "SkipList.h"
-#include "SkipList_muster.h"
+#include "SkipList.h"
+//#include "SkipList_muster.h"
 
 int main(int argc, char** argv)
 {
@@ -138,10 +138,16 @@ int main(int argc, char** argv)
     success = true;
     for (size_t i = 0; i < numbers1.size(); ++i)
     {
+        //cout << "delete: " << numbers1[i] << " success state: " << success << endl;
+        //map.printSkipList();
         success = success && map.remove(numbers1[i]);
         success = success && !map.remove(numbers1[i]); //try to remove again
         success = success && !map.find(numbers1[i]); // try to find removed
+
+        //map.printSkipList();
+
     }
+
     end = std::chrono::system_clock::now();
 
     if (success)
@@ -150,6 +156,6 @@ int main(int argc, char** argv)
         std::cout << "remove broken" << std::endl;
 
     std::cout << "took " << (end - start).count() << " nanoseconds" << std::endl;
-
+    //map.printSkipList();
     return 0;
 }

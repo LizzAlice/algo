@@ -90,7 +90,7 @@
 		<Unit filename="/home/chaperone/projects/algorithms/assignment3/SkipList.h">
 			<Option target="assignment3"/>
 		</Unit>
-		<Unit filename="/home/chaperone/projects/algorithms/assignment3/main.cpp">
+		<Unit filename="/home/chaperone/projects/algorithms/assignment3/assignment3_test.cpp">
 			<Option target="assignment3"/>
 		</Unit>
 		<Unit filename="/home/chaperone/projects/algorithms/assignment3/CMakeLists.txt">

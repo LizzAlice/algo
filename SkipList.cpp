@@ -1,10 +1,14 @@
+#include <string>
+#include <iostream>
+#include <random>
 #include "SkipList.h"
 
 
 
 SkipList::SkipList(vector<int64_t> const &init) {
     Node * minusInfinityNode = new Node();
-
+    head = minusInfinityNode;
+    srand(static_cast<unsigned int>(time(0))); //set to 42
     for (int64_t i : init) {
         insert(i);
     }
@@ -35,24 +39,24 @@ bool SkipList::insert(int64_t const x) {
         }
         if(level >= height) {
             Node *minusInfinityNode = new Node();
-            minusInfinityNode->level = level;
-            height = level;
+            minusInfinityNode->level = level + 1;
+            minusInfinityNode->downNode = head;
+            height = level + 1;
             head = minusInfinityNode;
         }
 
-        Node* prevNode = endNode->leftNode;
-        Node* nextNode = endNode;
-        Node* insertionNode = new Node(x, level);
+        Node* newNode = new Node(x, level);
 
+        newNode->rightNode = endNode->rightNode;
+        endNode->rightNode = newNode;
+        newNode->leftNode = endNode;
+        newNode->downNode = downNode;
+        if (newNode->rightNode != nullptr)
+            newNode->rightNode->leftNode = newNode;
 
-        insertionNode->leftNode = prevNode;
-        insertionNode->rightNode = nextNode;
-        insertionNode->downNode = downNode;
-        prevNode->rightNode = insertionNode;
-
-        coinFlip = false; //TODO flip coin
+        coinFlip = static_cast<bool>(rand() % 2); //TODO flip coin
         ++level;
-        downNode = insertionNode;
+        downNode = newNode;
     }
     ++elems;
     return true;
@@ -62,7 +66,7 @@ SkipList::Node *SkipList::findEndNodeInLevel(int64_t const x, int level) {
     Node* currentNode = head;
 
     while(true) {
-        if (x > currentNode->value && currentNode->rightNode != nullptr) {
+        if (currentNode->rightNode != nullptr && x >= currentNode->rightNode->value) {
             currentNode = currentNode->rightNode;
         } else {
             if (currentNode->level == level) {
@@ -85,14 +89,39 @@ bool SkipList::remove(int64_t const x) {
     if(currentNode->value != x) {
         return false;
     }
-    int level = 1;
+    int level = 0;
     while(currentNode->value == x) {
         currentNode->leftNode->rightNode = currentNode->rightNode;
-        currentNode->rightNode->leftNode = currentNode->leftNode;
+        if(currentNode->rightNode != nullptr) {
+            currentNode->rightNode->leftNode = currentNode->leftNode;
+        }
         delete(currentNode);
+
+        /*if (level == height-1) { //TODO reduce levels if highest node gets deleted
+            if (head->downNode->rightNode == nullptr) {
+                Node *newHead = head->downNode;
+                delete(head);
+                head = newHead;
+                height = height - 1;
+            }
+        }*/
+        ++level;
         currentNode = findEndNodeInLevel(x,level);
     }
 
     --elems;
     return true;
+}
+
+void SkipList::printSkipList() {
+    Node *currentMinusInfinityNode = head;
+    while(currentMinusInfinityNode != nullptr) {
+        Node *currentNode = currentMinusInfinityNode;
+        while(currentNode != nullptr) {
+            cout << currentNode->value << " ";
+            currentNode = currentNode->rightNode;
+        }
+        cout << endl;
+        currentMinusInfinityNode = currentMinusInfinityNode->downNode;
+    }
 }

@@ -28,7 +28,7 @@ private:
     Node* head;
     Node* findEndNodeInLevel(int64_t const x, int level);
     size_t elems = 0;
-    int height;
+    int height = 0;
 public:
     SkipList(vector<int64_t> const &init);
     ~SkipList();
@@ -36,6 +36,7 @@ public:
     bool find(int64_t const x);
     bool insert(int64_t const x);
     bool remove(int64_t const x);
+    void printSkipList();
 
 
 };
