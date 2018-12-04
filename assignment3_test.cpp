@@ -7,13 +7,13 @@
 #include <chrono>
 
 #include "SkipList.h"
-//#include "SkipList_muster.h"
+// #include "SkipList_muster.h"
 
 int main(int argc, char** argv)
 {
     if (argc != 2)
     {
-        std::cerr << "Wrong number of arguments!\n\nUsage: " << argv[0] << " <number of test elements>" << std::endl;
+        std::cerr << "wrong number of arguments!" << std::endl;
         return 0;
     }
 
@@ -28,7 +28,7 @@ int main(int argc, char** argv)
 
     unsigned inserted = 0;
 
-    while (inserted < 2 * numElems)
+    while (inserted < 3 * numElems)
     {
         unsigned cand = distribution(g1);
         if (!added[cand])
@@ -138,16 +138,10 @@ int main(int argc, char** argv)
     success = true;
     for (size_t i = 0; i < numbers1.size(); ++i)
     {
-        //cout << "delete: " << numbers1[i] << " success state: " << success << endl;
-        //map.printSkipList();
         success = success && map.remove(numbers1[i]);
         success = success && !map.remove(numbers1[i]); //try to remove again
         success = success && !map.find(numbers1[i]); // try to find removed
-
-        //map.printSkipList();
-
     }
-
     end = std::chrono::system_clock::now();
 
     if (success)
@@ -156,6 +150,6 @@ int main(int argc, char** argv)
         std::cout << "remove broken" << std::endl;
 
     std::cout << "took " << (end - start).count() << " nanoseconds" << std::endl;
-    //map.printSkipList();
+
     return 0;
 }
